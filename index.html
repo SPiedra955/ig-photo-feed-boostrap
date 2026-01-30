@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Instagram Photo Feed</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item fs-5 fw-normal px-3">
+              <i class="fa fa-instagram"> </i>
+              Instagram
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Create a new post
+            </button>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Create a new post
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label"
+                          >Caption:</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="message-text"
+                          placeholder="Add the caption of your post here"
+                        ></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <i class="fa fa-camera border px-3 py-2 fs-5"></i>
+                        <i class="fa fa-map-marker border px-3 py-2 fs-5"></i>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">
+                      Publish
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dropdown-->
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-gear"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility </a></li>
+                <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#">Log out</a>
+                </li>
+              </ul>
+            </div>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- tabs -->
+    <ul
+      class="nav nav-tabs d-flex justify-content-center fs-5"
+      id="myTab"
+      role="tablist"
+    >
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#home-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="home-tab-pane"
+          aria-selected="true"
+        >
+          <i class="fa fa-table"> </i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#profile-tab-pane"
+          type="button"
+          role="tab"
+          aria-controls="profile-tab-pane"
+          aria-selected="false"
+        >
+          <i class="fa fa-square"></i>
+        </button>
+      </li>
+    </ul>
+    <!--First Tab content-->
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="home-tab-pane"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+        tabindex="0"
+      >
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <!--Card structure start-->
+          <div class="col h-100">
+            <div class="card">
+              <img
+                src="./image.jpg"
+                class="card-img-top rounded-0"
+                alt="cristiano ronaldo"
+              />
+            </div>
+          </div>
+          <!--Card structure end-->
+          <div class="col h-100">
+            <div class="card">
+              <img src="./goku.jpg" class="card-img-top rounded-0" alt="goku" />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img
+                src="./pat-bob.jpg"
+                class="card-img-top rounded-0"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img
+                src="./pat-bob.jpg"
+                class="card-img-top rounded-0"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img
+                src="./image.jpg"
+                class="card-img-top rounded-0"
+                alt="cristiano ronaldo"
+              />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img src="./goku.jpg" class="card-img-top rounded-0" alt="goku" />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img src="./goku.jpg" class="card-img-top rounded-0" alt="goku" />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img
+                src="./pat-bob.jpg"
+                class="card-img-top rounded-0"
+                alt="..."
+              />
+            </div>
+          </div>
+          <div class="col h-100">
+            <div class="card">
+              <img
+                src="./image.jpg"
+                class="card-img-top rounded-0"
+                alt="cristiano ronaldo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Second Tab content-->
+      <div
+        class="tab-pane fade d-flex flex-column align-items-center"
+        id="profile-tab-pane"
+        role="tabpanel"
+        aria-labelledby="profile-tab"
+        tabindex="0"
+      >
+        <!--Card structure no margin start-->
+        <div class="card w-25 rounded-0">
+          <div
+            class="card-header text-capitalize fs-5 d-flex justify-content-between"
+          >
+            <p>Cr7 top performance</p>
+            <p>08/20</p>
+          </div>
+          <img src="./image.jpg" class="rounded-0" alt="cr7" />
+          <div class="card-body">
+            <p class="card-text fw-bold">204 Likes</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              doloribus modi blanditiis tenetur laudantium exercitationem autem
+              omnis tempora, quaerat quisquam ipsam temporibus maiores a,
+              officia neque impedit, accusamus dicta vitae.
+            </p>
+          </div>
+        </div>
+        <!--Card structure no margin end-->
+        <!--Card structure with margin start-->
+        <div class="card w-25 rounded-0 my-3">
+          <div
+            class="card-header text-capitalize fs-5 d-flex justify-content-between"
+          >
+            <p>Dragon Ball is back!</p>
+            <p>09/20</p>
+          </div>
+          <img src="./goku.jpg" class="rounded-0" alt="cr7" />
+          <div class="card-body">
+            <p class="card-text fw-bold">540 Likes</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              doloribus modi blanditiis tenetur laudantium exercitationem autem
+              omnis tempora, quaerat quisquam ipsam temporibus maiores a,
+              officia neque impedit, accusamus dicta vitae.
+            </p>
+          </div>
+        </div>
+        <!--Card structure with margin end-->
+        <div class="card w-25 rounded-0 my-3">
+          <div
+            class="card-header text-capitalize fs-5 d-flex justify-content-between"
+          >
+            <p>New Season</p>
+            <p>10/20</p>
+          </div>
+          <img src="./pat-bob.jpg" class="rounded-0" alt="cr7" />
+          <div class="card-body">
+            <p class="card-text fw-bold">40 Likes</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              doloribus modi blanditiis tenetur laudantium exercitationem autem
+              omnis tempora, quaerat quisquam ipsam temporibus maiores a,
+              officia neque impedit, accusamus dicta vitae.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Boostrap script-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
